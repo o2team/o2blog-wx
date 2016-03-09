@@ -1,0 +1,24 @@
+{
+  "name": "o2blog-wx",
+  "version": "1.0.0",
+  "description": "凹凸博客文章转微信公众号排版",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "凹凸博客",
+    "微信公众号排版转换",
+    "爬虫"
+  ],
+  "author": "SkyCai",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^1.5.2",
+    "cheerio": "^0.19.0",
+    "express": "^4.13.3",
+    "jade": "^1.11.0",
+    "superagent": "^1.6.1"
+  }
+}
