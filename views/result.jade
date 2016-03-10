@@ -4,7 +4,7 @@ html(lang='zh-CN')
     meta(charset='UTF-8')
     meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0')
     title 凹凸博客文章转公众号文章排版
-    link(rel='stylesheet',href='/css/style.css')
+    link(rel='stylesheet',href='css/style.css')
   body.page_result
     if page
         - var item = result[page];
@@ -49,7 +49,7 @@ html(lang='zh-CN')
                             | 点击
                             strong 阅读原文
                             | 了解更多详情
-    script(src='/js/clipboard.js')
+    script(src='js/clipboard.js')
     script.
         var items = Array.apply( null, document.querySelectorAll('.J_item') );
         items.forEach(function(item, i){
