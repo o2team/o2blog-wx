@@ -7,31 +7,31 @@ html(lang='zh-CN')
     link(rel='stylesheet',href='css/style.css')
     link(rel='stylesheet',href='https://aotu.io/assets/css/dist-f0b08ab836.o2.css')
   body.page_result
-        each item,idx in result
-                - var klass = 'article' + idx;
-                section                
-                    .article_info
-                        p
-                            label(for="J_title") 文章标题：
-                            span#J_title= item.title
-                        p 
-                            label(for="J_href") 链接地址：
-                            span#J_href= item.href
-                        p 
-                            label(for="J_author") 作者：
-                            span#J_author= item.author
-                    button.J_item(title='点击拷贝这篇文章正文',data-clipboard-target="") 复制文章正文
-                    article(class= klass)                        
-                        section.post-content!= item.content
-                        section.article_foot
-                            | 点击
-                            strong 阅读原文
-                            | 了解更多详情
-    script(src='js/clipboard.js')
+    each item,idx in result
+      - var klass = 'article' + idx;
+      section
+        .article_info
+          p
+              label(for="J_title") 文章标题：
+              span#J_title= item.title
+          p
+              label(for="J_href") 链接地址：
+              span#J_href= item.href
+          p
+              label(for="J_author") 作者：
+              span#J_author= item.author
+        button.J_item(title='点击拷贝这篇文章正文',data-clipboard-target="") 复制文章正文
+        article(class= klass)
+          section.post-content!= item.content
+          section.article_foot
+              | 点击
+              strong 阅读原文
+              | 了解更多详情
+    script(type='text/javascript', src='js/clipboard.js')
     script.
-        var items = Array.apply( null, document.querySelectorAll('.J_item') );
-        items.forEach(function(item, i){
-            var target = item.parentNode.querySelector('article').className;
-            item.setAttribute('data-clipboard-target', '.' + target);            
-        });
-        new Clipboard('.J_item');
+      var items = Array.apply( null, document.querySelectorAll('.J_item') );
+      items.forEach(function(item, i){
+          var target = item.parentNode.querySelector('article').className;
+          item.setAttribute('data-clipboard-target', '.' + target);
+      });
+      new Clipboard('.J_item');
